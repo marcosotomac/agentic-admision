@@ -10,6 +10,7 @@ export function Composer({
   inputValue,
   isSending,
   onInputChange,
+  onOpenCareers,
   onQuickPrompt,
   onSubmit,
   quickChips,
@@ -17,6 +18,7 @@ export function Composer({
   inputValue: string
   isSending: boolean
   onInputChange: (value: string) => void
+  onOpenCareers: () => void
   onQuickPrompt: (message: string) => void
   onSubmit: (message: string) => void
   quickChips: QuickChip[]
@@ -64,7 +66,7 @@ export function Composer({
                 onInputChange(event.target.value)
               }
             }}
-            className="h-11 rounded-xl !border-slate-200 !bg-white px-4 pr-20 text-xs !text-slate-800 caret-blue-700 shadow-sm placeholder:text-slate-400 focus-visible:!border-blue-500 focus-visible:!bg-white focus-visible:ring-1 focus-visible:ring-blue-500/20 read-only:cursor-wait sm:h-12 sm:px-5 sm:pr-24 sm:text-sm"
+            className="h-11 rounded-xl !border-slate-200 !bg-white px-4 pr-20 text-xs !text-slate-800 caret-blue-700 shadow-sm placeholder:text-slate-400 focus-visible:!border-blue-500 focus-visible:!bg-white focus-visible:ring-1 focus-visible:ring-blue-500/20 read-only:cursor-wait sm:h-12 sm:px-5 sm:text-sm md:pr-14"
           />
           <div className="absolute top-1/2 right-2 flex -translate-y-1/2 items-center gap-1.5">
             <Tooltip>
@@ -72,14 +74,16 @@ export function Composer({
                 <Button
                   variant="ghost"
                   size="icon"
-                  aria-label="Adjuntar archivo"
-                  className="size-8 rounded-lg text-slate-500 transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 active:scale-90 sm:size-9"
+                  type="button"
+                  aria-label="Abrir carreras"
+                  onClick={onOpenCareers}
+                  className="size-8 rounded-lg text-slate-500 transition-all duration-200 hover:bg-blue-50 hover:text-blue-700 active:scale-90 sm:size-9 md:hidden"
                   disabled={isSending}
                 >
-                  <DecorativeIcon name="paperclip" className="size-4" />
+                  <DecorativeIcon name="briefcase" className="size-4" />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Adjuntar</TooltipContent>
+              <TooltipContent>Carreras</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>

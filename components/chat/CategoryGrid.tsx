@@ -8,12 +8,17 @@ import type { Category } from "@/lib/types/chat"
 export function CategoryGrid({
   onSelectCategory,
   onShowAllCareers,
+  className,
 }: {
   onSelectCategory: (category: Category) => void
   onShowAllCareers: () => void
+  className?: string
 }) {
   return (
-    <section aria-label="Áreas académicas" className="space-y-3">
+    <section
+      aria-label="Áreas académicas"
+      className={`space-y-3 ${className || ""}`}
+    >
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((category) => (
           <button

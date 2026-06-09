@@ -73,6 +73,7 @@ export default function Page() {
   const [leadFields, setLeadFields] = useState<LeadFields>({})
   const [showDesktopProfile, setShowDesktopProfile] = useState(true)
   const [showMobileProfile, setShowMobileProfile] = useState(false)
+  const [showMobileCareers, setShowMobileCareers] = useState(false)
   const [curriculumData, setCurriculumData] = useState<CurriculumData | null>(
     null
   )
@@ -322,6 +323,7 @@ export default function Page() {
                   currentProgram={leadFields.program}
                 />
                 <CategoryGrid
+                  className="hidden md:block"
                   onSelectCategory={setActiveCategory}
                   onShowAllCareers={() =>
                     submitMessage(
@@ -335,6 +337,7 @@ export default function Page() {
               inputValue={inputValue}
               isSending={isSending || isTyping}
               onInputChange={setInputValue}
+              onOpenCareers={() => setShowMobileCareers(true)}
               onQuickPrompt={typeMessageAndSubmit}
               onSubmit={submitMessage}
               quickChips={getDynamicQuickChips()}
@@ -384,6 +387,57 @@ export default function Page() {
             </div>
             <ScrollArea className="flex-1 overflow-y-auto p-6">
               <LeadProfilePanelContent leadFields={leadFields} />
+            </ScrollArea>
+          </div>
+        </div>
+      )}
+
+      {showMobileCareers && (
+        <div
+          className="animate-backdrop-fade fixed inset-0 z-40 bg-slate-950/40 backdrop-blur-sm md:hidden"
+          onClick={() => setShowMobileCareers(false)}
+        >
+          <div
+            className="animate-drawer-slide-up fixed inset-x-0 bottom-0 z-50 flex max-h-[86vh] flex-col rounded-t-[2rem] border-t border-slate-200/50 bg-white shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between border-b border-slate-100 px-6 py-4">
+              <div className="flex items-center gap-3">
+                <span className="flex size-9 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
+                  <DecorativeIcon name="briefcase" className="size-4.5" />
+                </span>
+                <div>
+                  <span className="block text-sm font-bold text-slate-800">
+                    Carreras USIL
+                  </span>
+                  <span className="block text-xs font-medium text-slate-400">
+                    Elige un área académica
+                  </span>
+                </div>
+              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                aria-label="Cerrar carreras"
+                onClick={() => setShowMobileCareers(false)}
+                className="size-8 rounded-lg text-slate-400 hover:bg-slate-50 hover:text-slate-900"
+              >
+                <DecorativeIcon name="x" className="size-4" />
+              </Button>
+            </div>
+            <ScrollArea className="flex-1 overflow-y-auto p-4">
+              <CategoryGrid
+                onSelectCategory={(category) => {
+                  setShowMobileCareers(false)
+                  setActiveCategory(category)
+                }}
+                onShowAllCareers={() => {
+                  setShowMobileCareers(false)
+                  submitMessage(
+                    "Quiero conocer todas las carreras disponibles en USIL"
+                  )
+                }}
+              />
             </ScrollArea>
           </div>
         </div>
