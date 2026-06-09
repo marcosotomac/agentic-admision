@@ -90,8 +90,16 @@
 }
 
 @layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--border, currentColor);
+  }
+
   * {
-    @apply border-border outline-ring/50;
+    @apply outline-ring/50;
   }
 
   html,
@@ -108,8 +116,16 @@
 @layer components {
   .usil-brand-surface {
     background:
-      radial-gradient(circle at 38% 16%, color-mix(in oklch, var(--usil-sky), transparent 78%), transparent 13rem),
-      linear-gradient(152deg, color-mix(in oklch, var(--usil-navy), blue 16%), color-mix(in oklch, var(--usil-navy), black 18%) 74%);
+      radial-gradient(
+        circle at 38% 16%,
+        color-mix(in oklch, var(--usil-sky), transparent 78%),
+        transparent 13rem
+      ),
+      linear-gradient(
+        152deg,
+        color-mix(in oklch, var(--usil-navy), blue 16%),
+        color-mix(in oklch, var(--usil-navy), black 18%) 74%
+      );
   }
 
   .usil-logo-fallback {
@@ -214,7 +230,9 @@
 .page-entrance {
   opacity: 0;
   transform: scale(0.985);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .page-entrance-active {
@@ -247,10 +265,22 @@
 
 .ambient-bg {
   background-color: oklch(0.985 0.008 240);
-  background-image: 
-    radial-gradient(at 0% 0%, color-mix(in oklch, var(--usil-sky) 14%, transparent) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, color-mix(in oklch, var(--usil-navy) 10%, transparent) 0px, transparent 50%),
-    radial-gradient(at 50% 0%, color-mix(in oklch, var(--usil-blue) 8%, transparent) 0px, transparent 55%);
+  background-image:
+    radial-gradient(
+      at 0% 0%,
+      color-mix(in oklch, var(--usil-sky) 14%, transparent) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 100% 100%,
+      color-mix(in oklch, var(--usil-navy) 10%, transparent) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 50% 0%,
+      color-mix(in oklch, var(--usil-blue) 8%, transparent) 0px,
+      transparent 55%
+    );
 }
 
 .glass-card {
@@ -274,7 +304,8 @@
 }
 
 @keyframes pulseSubtle {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
   }
@@ -287,5 +318,3 @@
 .animate-pulse-subtle {
   animation: pulseSubtle 2s infinite ease-in-out;
 }
-
-
