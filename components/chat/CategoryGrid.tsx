@@ -55,7 +55,7 @@ export function CategoryGrid({
       <Button
         variant="outline"
         onClick={onShowAllCareers}
-        className="h-10 w-full cursor-pointer rounded-xl border-slate-200/80 bg-white text-xs font-semibold text-slate-600 transition-all duration-200 ease-out-expo hover:border-blue-500 hover:text-blue-700 active:scale-[0.99] md:text-sm"
+        className="h-10 w-full cursor-pointer rounded-xl !border-slate-200/80 !bg-white text-xs font-semibold !text-slate-600 transition-all duration-200 ease-out-expo hover:!border-blue-500 hover:!bg-white hover:!text-blue-700 active:scale-[0.99] md:text-sm"
       >
         <DecorativeIcon name="sparkles" className="size-4" />
         Ver todas las carreras

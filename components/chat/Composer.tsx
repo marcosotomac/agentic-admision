@@ -35,7 +35,7 @@ export function Composer({
             value={inputValue}
             disabled={isSending}
             onChange={(event) => onInputChange(event.target.value)}
-            className="h-11 rounded-xl border-slate-200 bg-white px-4 pr-20 text-xs shadow-sm placeholder:text-slate-400 focus-visible:border-blue-500 focus-visible:ring-1 focus-visible:ring-blue-500/20 sm:h-12 sm:px-5 sm:pr-24 sm:text-sm"
+            className="h-11 rounded-xl !border-slate-200 !bg-white px-4 pr-20 text-xs shadow-sm placeholder:text-slate-400 focus-visible:!border-blue-500 focus-visible:!bg-white focus-visible:ring-1 focus-visible:ring-blue-500/20 sm:h-12 sm:px-5 sm:pr-24 sm:text-sm"
           />
           <div className="absolute top-1/2 right-2 flex -translate-y-1/2 items-center gap-1.5">
             <Tooltip>
@@ -77,7 +77,7 @@ export function Composer({
               type="button"
               disabled={isSending}
               onClick={() => onQuickPrompt(chip.label)}
-              className="h-9 shrink-0 justify-center gap-2 rounded-lg border-slate-200 bg-slate-50/70 px-3 text-xs font-semibold text-slate-600 transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:bg-blue-50 hover:text-blue-700 hover:shadow-sm active:scale-[0.97] md:shrink"
+              className="h-9 shrink-0 justify-center gap-2 rounded-lg !border-slate-200 !bg-slate-50/70 px-3 text-xs font-semibold !text-slate-600 transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:!bg-blue-50 hover:!text-blue-700 hover:shadow-sm active:scale-[0.97] md:shrink"
             >
               <DecorativeIcon
                 name={chip.icon}
