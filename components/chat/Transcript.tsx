@@ -1,4 +1,4 @@
-import { ReactNode, memo } from "react"
+import { ReactNode, memo, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { BotAvatar } from "./BotAvatar"
@@ -15,6 +15,14 @@ export function Transcript({
   onOpenCurriculum: (career: string) => void
   currentProgram?: string
 }) {
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [messages])
+
   return (
     <div className="space-y-4">
       {messages.map((message) => (
@@ -25,6 +33,7 @@ export function Transcript({
           currentProgram={currentProgram}
         />
       ))}
+      <div ref={scrollRef} className="h-px" />
     </div>
   )
 }
