@@ -77,7 +77,7 @@ export function Composer({
               type="button"
               disabled={isSending}
               onClick={() => onQuickPrompt(chip.label)}
-              className="h-9 shrink-0 justify-center gap-2 rounded-lg !border-slate-200 !bg-slate-50/70 px-3 text-xs font-semibold !text-slate-600 transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:!bg-blue-50 hover:!text-blue-700 hover:shadow-sm active:scale-[0.97] md:shrink"
+              className="h-9 shrink-0 justify-center gap-2 rounded-lg !border-slate-200 !bg-slate-50/70 px-3 text-xs font-semibold !text-slate-600 transition-all duration-300 ease-out-expo hover:!border-blue-200 hover:!bg-blue-50 hover:!text-blue-700 hover:shadow-sm active:scale-[0.97] md:shrink"
             >
               <DecorativeIcon
                 name={chip.icon}
