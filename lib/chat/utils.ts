@@ -1,5 +1,4 @@
-import { ReactNode } from "react"
-import type { ChatApiResponse, RagSource, IconName, Category } from "@/lib/types/chat"
+import type { Category, ChatApiResponse, RagSource } from "@/lib/types/chat"
 import type { LeadFields } from "@/lib/leads/scoring"
 import { careersByCategory } from "@/lib/constants/careers"
 
