@@ -92,7 +92,7 @@ export function LeadProfilePanelContent({
           return (
             <div
               key={key}
-              className={`flex items-start gap-3 rounded-xl border-1 p-3 transition-all duration-300 ${
+              className={`flex items-start gap-3 rounded-xl border p-3 transition-all duration-300 ${
                 isFilled
                   ? "border-emerald-100/60 bg-emerald-50/20 shadow-sm"
                   : "border-slate-100 bg-white/40"

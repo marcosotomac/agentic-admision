@@ -22,7 +22,7 @@ export function CategoryGrid({
             onClick={() => onSelectCategory(category)}
             className="block w-full cursor-pointer text-left focus-visible:outline-none"
           >
-            <Card className="group rounded-xl border-1 border-slate-200/60 bg-white py-0 shadow-none transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-slate-300/80 hover:shadow-[0_6px_20px_rgba(15,23,42,0.04)] active:scale-[0.99]">
+            <Card className="group rounded-xl border border-slate-200/60 bg-white py-0 shadow-none transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-slate-300/80 hover:shadow-[0_6px_20px_rgba(15,23,42,0.04)] active:scale-[0.99]">
               <CardContent className="flex min-h-20 items-center gap-3.5 p-3.5">
                 <span
                   className={`flex size-10 shrink-0 items-center justify-center rounded-xl border border-slate-100/50 bg-slate-50 text-slate-500 ring-1 ring-transparent transition-all duration-200 md:size-11 ${hoverToneClasses[category.tone]}`}
@@ -55,7 +55,7 @@ export function CategoryGrid({
       <Button
         variant="outline"
         onClick={onShowAllCareers}
-        className="h-10 w-full cursor-pointer rounded-xl border-1 border-slate-200/80 bg-white text-xs font-semibold text-slate-600 transition-all duration-200 ease-out-expo hover:border-blue-500 hover:text-blue-700 active:scale-[0.99] md:text-sm"
+        className="h-10 w-full cursor-pointer rounded-xl border-slate-200/80 bg-white text-xs font-semibold text-slate-600 transition-all duration-200 ease-out-expo hover:border-blue-500 hover:text-blue-700 active:scale-[0.99] md:text-sm"
       >
         <DecorativeIcon name="sparkles" className="size-4" />
         Ver todas las carreras

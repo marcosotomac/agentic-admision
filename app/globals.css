@@ -90,16 +90,6 @@
 }
 
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--border, currentColor);
-    border-style: solid;
-    border-width: 0;
-  }
-
   * {
     @apply outline-ring/50;
   }
