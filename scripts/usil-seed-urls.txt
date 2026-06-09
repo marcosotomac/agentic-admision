@@ -1,0 +1,42 @@
+# USIL RAG seed URLs. The ingestion CLI reads one explicit URL per line and does not crawl.
+
+# Original user-provided URLs
+https://descubre.usil.edu.pe/landings/pregrado/admision/?utm_campaign=pregrado-2026-02&utm_term=digital&utm_source=busquedas-pago&utm_medium=google&utm_content=search-adm_pg2602_cv_sem_brand-usil_kwrds&utm_keyword=usil&gad_source=1&gad_campaignid=21759227475&gbraid=0AAAAADGqStgcQIrtcLkJe1J-o02fWk7UE&gclid=EAIaIQobChMIyZOqx871lAMVbl5IAB1pZy1xEAAYASAAEgLgvPD_BwE
+https://usil.edu.pe/pregrado/
+
+# Official faculty pages used to discover career URLs
+https://usil.edu.pe/pregrado/facultad-ingenieria
+https://usil.edu.pe/pregrado/facultad-ciencias-empresariales
+https://usil.edu.pe/pregrado/facultad-ciencias-de-salud
+
+# Engineering and AI careers
+https://usil.edu.pe/pregrado/ingenieria-agroindustrial
+https://usil.edu.pe/pregrado/ingenieria-ambiental
+https://usil.edu.pe/pregrado/ingenieria-biomedica
+https://usil.edu.pe/pregrado/ingenieria-civil
+https://usil.edu.pe/pregrado/ingenieria-empresarial
+https://usil.edu.pe/pregrado/ingenieria-en-ciberseguridad
+https://usil.edu.pe/pregrado/ingenieria-en-industrias-alimentarias
+https://usil.edu.pe/pregrado/ingenieria-industrial-y-comercial
+https://usil.edu.pe/pregrado/ingenieria-mecatronica
+https://usil.edu.pe/pregrado/ingenieria-sistemas-de-informacion
+https://usil.edu.pe/pregrado/ingenieria-de-software
+https://usil.edu.pe/pregrado/ciencia-de-datos
+
+# Business careers
+https://usil.edu.pe/pregrado/administracion
+https://usil.edu.pe/pregrado/administracion-y-emprendimiento
+https://usil.edu.pe/pregrado/administracion-y-finanzas-corporativas
+https://usil.edu.pe/pregrado/digital-business-management
+https://usil.edu.pe/pregrado/economia-y-finanzas
+https://usil.edu.pe/pregrado/economia-y-negocios-internacionales
+https://usil.edu.pe/pregrado/international-business
+https://usil.edu.pe/pregrado/marketing
+
+# Health careers
+https://usil.edu.pe/pregrado/ciencias-de-actividad-fisica-y-deporte
+https://usil.edu.pe/pregrado/enfermeria
+https://usil.edu.pe/pregrado/medicina-humana
+https://usil.edu.pe/pregrado/nutricion-dietetica
+https://usil.edu.pe/pregrado/psicologia
+https://usil.edu.pe/pregrado/tecnologia-medica-en-terapia-fisica-y-rehabilitacion
