@@ -35,7 +35,7 @@ export function Composer({
             value={inputValue}
             disabled={isSending}
             onChange={(event) => onInputChange(event.target.value)}
-            className="h-11 rounded-xl !border-slate-200 !bg-white px-4 pr-20 text-xs shadow-sm placeholder:text-slate-400 focus-visible:!border-blue-500 focus-visible:!bg-white focus-visible:ring-1 focus-visible:ring-blue-500/20 sm:h-12 sm:px-5 sm:pr-24 sm:text-sm"
+            className="h-11 rounded-xl !border-slate-200 !bg-white px-4 pr-20 text-xs !text-slate-800 caret-blue-700 shadow-sm placeholder:text-slate-400 focus-visible:!border-blue-500 focus-visible:!bg-white focus-visible:ring-1 focus-visible:ring-blue-500/20 sm:h-12 sm:px-5 sm:pr-24 sm:text-sm"
           />
           <div className="absolute top-1/2 right-2 flex -translate-y-1/2 items-center gap-1.5">
             <Tooltip>
