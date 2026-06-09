@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react"
+
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
@@ -19,6 +21,24 @@ export function Composer({
   onSubmit: (message: string) => void
   quickChips: QuickChip[]
 }) {
+  const inputRef = useRef<HTMLInputElement>(null)
+  const wasSendingRef = useRef(isSending)
+
+  useEffect(() => {
+    const wasSending = wasSendingRef.current
+    wasSendingRef.current = isSending
+
+    if (!wasSending || isSending) {
+      return
+    }
+
+    const frame = window.requestAnimationFrame(() => {
+      inputRef.current?.focus({ preventScroll: true })
+    })
+
+    return () => window.cancelAnimationFrame(frame)
+  }, [isSending])
+
   return (
     <footer className="border-t border-slate-100/60 px-4 py-3 sm:px-6 md:px-8">
       <form
@@ -30,6 +50,7 @@ export function Composer({
       >
         <div className="relative">
           <Input
+            ref={inputRef}
             aria-label="Consulta para USILBot"
             placeholder="Escribe tu consulta..."
             value={inputValue}
