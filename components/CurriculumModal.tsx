@@ -219,6 +219,7 @@ export default function CurriculumModal({
                 <span className="rounded-lg bg-emerald-50 px-2.5 py-1 text-emerald-700 border border-emerald-100">
                   {totalCreditsInActiveCycle} Créditos
                 </span>
+                <span>Hola como estas?</span>
               </div>
             </div>
 
